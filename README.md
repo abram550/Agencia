@@ -47,7 +47,7 @@ Un viajero puede realizar tantos viajes como desee con la agencia. Un viaje dete
 ```
   
 <div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/consulta%201.png" alt="Ejercicio">
+  <img src="Saved Pictures/inico.png" alt="Ejercicio">
 </div>
   
 #### Mostrar todos los viajes que tienen un determinado destino:
