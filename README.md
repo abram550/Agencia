@@ -35,117 +35,73 @@ Un viajero puede realizar tantos viajes como desee con la agencia. Un viaje dete
 <br>
 
 ---
-<details><summary>Consultas Basicas</summary>
+<details><summary>Primer Paso:</summary>
 <p>
 
-#### Mostrar todos los viajes que tiene un determinado viajero:
+#### Ejecutar el siguiente comando en cmd para iniciar el server:
 
-```SQL
-  select v.id, v.nombre
-  from viajeros v, viajes vi 
-  where v.id = vi.id ;
 ```
+  python manage.py runserver
+```
+  #### Al ejecutarlo saldria lo siguiente luego de haber iniciado seccion en admin:
   
 <div>
   <img src="Saved Pictures/inico.png" alt="Ejercicio">
 </div>
-  
-#### Mostrar todos los viajes que tienen un determinado destino:
-
-```SQL
-  select vi.*, d.nombre
-  from destinos d, viajes vi 
-  where d.id = vi.destino_id;
-```
-  
-  <div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/consulta%202.png" alt="Ejercicio">
-</div>
-  
-#### Mostrar todos los viajes que tienen un determinado Origen:
-
-```SQL
-  select vi.*, o.nombre
-  from origeness o, viajes vi 
-  where o.id = vi.origen_id;
-```
-  
-<div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/consulta%203.png" alt="Ejercicio">
-</div>
-  
+   
 </p>
 </details>
 
 <br>
 
 ---
-<details><summary>Consultas Utilizando el Inner Join </summary>
+<details><summary>Ingresar Datos a Viajes</summary>
 <p>
+#### Ingresando datos de viajes en los campos como se muestra a continuación:
 
-  #### Mostrar los viajeros con su determinado destino y su fecha en un rango X:
-
-```SQL
-  select vi.*, d.nombre
-  from destinos d
-  join viajes vi on d.id = vi.destino_id
-  Where vi.fecha  between "2023-04-02" and "2023-04-06";
-```
-  
- <div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/consulta%204.png" alt="Ejercicio">
-</div>
-  
-#### Consulta para mostrar el destino del viajero:
-
-```SQL
-  SELECT *
-  FROM viajeros vi
-  JOIN destinos
-  ON vi.id = destinos.id
-  WHERE destinos.id = '2';
-```
-  
+  #### ---------------------------------------------------------------------------------------------------
   <div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/consulta%205.png" alt="Ejercicio">
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/Destino.png" alt="Ejercicio">
 </div>
-  
+  #### ---------------------------------------------------------------------------------------------------
+  <div>
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/Origen.png" alt="Ejercicio">
+</div>
+  #### ---------------------------------------------------------------------------------------------------
+  <div>
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/Viaje.png" alt="Ejercicio">
+</div>
+  <details><summary>Ingresar Datos a Viajeros</summary>
+    <p>
+  #### Luego ingresamos datos de viajeros en los campos como se muestra a continuación:
+  #### ---------------------------------------------------------------------------------------------------
+  <div>
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/Referencia_Familiares.png" alt="Ejercicio">
+</div>
+  #### ---------------------------------------------------------------------------------------------------
+  <div>
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/Viajeros.png" alt="Ejercicio">
+</div>
+  #### ---------------------------------------------------------------------------------------------------
+  <div>
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/Resultado_viajeros.png" alt="Ejercicio">
+</div>
+      
+    </p>
+    </details>
 </p>
 </details>
 
 <br>
 
 ---
-<details><summary>Consultas Utilizando Varios Inner Join Y Aplicando El CTE</summary>
+<details><summary>Y por ultimo lo datos guardados en las tablas en MYSQL:</summary>
 <p>
 
-#### Consulta basica utilizando el CTE
 
-```SQL
-WITH viajeros_registrados AS (
-  SELECT dni, nombre, direccion, telefono
-  FROM viajeros
-  )
-  SELECT * FROM viajeros_registrados;
-```
+#### ---------------------------------------------------------------------------------------------------
   <div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/Consulta%206.png" alt="Ejercicio">
-</div>
-  
-  #### Consulta el nombre, el destino junto con su fecha:
-
-```SQL
-  select vi.id, v.viajeros_id,v.origen_id as Origen, v.destino_id as Destino , v.fecha
-  from viajeros vi
-  join viajes v  on (vi.id = v.id)
-  join destinos d on (v.id = d.id)
-  join origeness o on (v.id = o.id)
-  Where v.fecha  between "2023-04-02" and "2023-04-06";
-```
-
-<div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/Consulta%207.png" alt="Ejercicio">
+  <img src="https://github.com/abram550/Agencia/blob/main/Saved%20Pictures/MYSQL.png" alt="Ejercicio">
 </div>
 
-</p>
-</details>
+
