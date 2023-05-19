@@ -27,7 +27,7 @@ Un viajero puede realizar tantos viajes como desee con la agencia. Un viaje dete
 
 
 <div>
-  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/Tablas.png" alt="Ejercicio">
+  <img src="https://github.com/abram550/Agencia-de-Viajes/blob/main/Imagenes/Diagrama_Agencia.png" alt="Ejercicio">
 </div>
 
 </p>
